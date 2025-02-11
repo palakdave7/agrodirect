@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Now - AgroConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .category-title {
+            text-align: center;
+            font-weight: 600;
+            color: #198754;
+            margin-top: 20px;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            background: #198754;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#">AgroConnect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Shop Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#review">Review Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cart">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shop Now Section -->
+    <div class="container my-4">
+        <h2 class="category-title">Shop by Category</h2>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?vegetables" class="card-img-top" alt="Vegetables">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Vegetables</h5>
+                        <a href="vegetable.html" class="btn btn-success">View Products</a> <!-- Replace with actual link -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?fruits" class="card-img-top" alt="Fruits">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Fruits</h5>
+                        <a href="fruits.html" class="btn btn-success">View Products</a> <!-- Replace with actual link -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?seeds" class="card-img-top" alt="Seeds">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Seeds</h5>
+                        <a href="https://example.com/seeds" class="btn btn-success">View Products</a> <!-- Replace with actual link -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            <div class="col">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?saplings" class="card-img-top" alt="Saplings">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Saplings</h5>
+                        <a href="https://example.com/saplings" class="btn btn-success">View Products</a> <!-- Replace with actual link -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?crops" class="card-img-top" alt="Crops">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Crops</h5>
+                        <a href="https://example.com/crops" class="btn btn-success">View Products</a> <!-- Replace with actual link -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?organic" class="card-img-top" alt="Oil Extracts">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Oil Extracts</h5>
+                        <a href="https://example.com/oil-extracts" class="btn btn-success">View Products</a> <!-- Replace with actual link -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AgroConnect. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
