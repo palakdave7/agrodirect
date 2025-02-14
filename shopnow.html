@@ -8,50 +8,161 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
+            background: #f4f8f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
+        .custom-navbar {
+            background: linear-gradient(135deg, #198754, #145a32);
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: #fff;
+            transition: color 0.3s;
+        }
+        .navbar-brand:hover {
+            color: #d4edda;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            color: #eaf4ea;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #d4edda;
+        }
+        .btn-login {
+            background-color: #d4edda;
+            color: #155d44;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-login:hover {
+            background-color: #a3d9a5;
+            color: #0c3b26;
+        }
+        .search-box {
+            border-radius: 30px;
+            padding: 5px 15px;
+            border: none;
+            width: 250px;
+            margin-right: 15px;
+        }
+        /* Shop Now Section */
         .category-title {
             text-align: center;
-            font-weight: 600;
+            font-weight: 700;
             color: #198754;
-            margin-top: 20px;
+            margin: 30px 0;
+            font-size: 2rem;
         }
-        .card {
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
+
+        /* Shop Now Section */
+.category-title {
+    text-align: center;
+    font-weight: 700;
+    color: #198754;
+    margin: 30px 0;
+    font-size: 2rem;
+}
+
+/* Light Green Card Styling */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    height: 100%;
+    min-height: 400px;
+    background: #eaf4ea; /* Light Green */
+}
+
+/* Card Hover Effect - Gentle Lift */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.card img {
+    height: 280px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+}
+
+/* Centered Card Content */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Card Title */
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #145a32;
+    margin-bottom: 10px;
+}
+
+/* Green Buttons */
+.btn-success {
+    background: #198754;
+    border: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.btn-success:hover {
+    background: #145a32;
+}
+
+
+        /* Footer */
         footer {
             background: #198754;
             padding: 15px;
             color: white;
             text-align: center;
-            margin-top: 30px;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">AgroConnect</a>
+            <a class="navbar-brand fw-bold" href="#">🌿 AgroConnect</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Shop Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../shopnow.html">Shop Now</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#review">Review Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#cart">Cart</a></li>
                 </ul>
+                <input type="text" class="search-box" placeholder="Search Products...">
+                <a href="login.html" class="btn btn-login ms-3" id="loginButton">Login</a>
             </div>
         </div>
     </nav>
+        
 
     <!-- Shop Now Section -->
     <div class="container my-4">
@@ -60,72 +171,75 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card">
-                    <img src="https://source.unsplash.com/400x300/?vegetables" class="card-img-top" alt="Vegetables">
-                    <div class="card-body text-center">
+                    <img src="/shopnow_images/randy-fath-5aJVJvJ9rG8-unsplash.jpg" class="card-img-top" alt="Vegetables">
+                    <div class="card-body">
                         <h5 class="card-title">Vegetables</h5>
-                        <a href="vegetable.html" class="btn btn-success">View Products</a> <!-- Replace with actual link -->
+                        <a href="vegetable.html" class="btn btn-success">View Products</a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col">
                 <div class="card">
-                    <img src="https://source.unsplash.com/400x300/?fruits" class="card-img-top" alt="Fruits">
-                    <div class="card-body text-center">
+                    <img src="/shopnow_images/fruit-basket.jpg" class="card-img-top" alt="Fruits">
+                    <div class="card-body">
                         <h5 class="card-title">Fruits</h5>
-                        <a href="fruits.html" class="btn btn-success">View Products</a> <!-- Replace with actual link -->
+                        <a href="fruit/fruits.html" class="btn btn-success">View Products</a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col">
                 <div class="card">
-                    <img src="https://source.unsplash.com/400x300/?seeds" class="card-img-top" alt="Seeds">
-                    <div class="card-body text-center">
+                    <img src="/shopnow_images/seeds (1).png" class="card-img-top" alt="Seeds">
+                    <div class="card-body">
                         <h5 class="card-title">Seeds</h5>
-                        <a href="https://example.com/seeds" class="btn btn-success">View Products</a> <!-- Replace with actual link -->
+                        <a href="seeds.html" class="btn btn-success">View Products</a>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+
             <div class="col">
                 <div class="card">
-                    <img src="https://source.unsplash.com/400x300/?saplings" class="card-img-top" alt="Saplings">
-                    <div class="card-body text-center">
+                    <img src="/shopnow_images/saplingsimg.jpg" class="card-img-top" alt="Saplings">
+                    <div class="card-body">
                         <h5 class="card-title">Saplings</h5>
-                        <a href="https://example.com/saplings" class="btn btn-success">View Products</a> <!-- Replace with actual link -->
+                        <a href="saplings.html" class="btn btn-success">View Products</a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col">
                 <div class="card">
-                    <img src="https://source.unsplash.com/400x300/?crops" class="card-img-top" alt="Crops">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Crops</h5>
-                        <a href="https://example.com/crops" class="btn btn-success">View Products</a> <!-- Replace with actual link -->
+                    <img src="/shopnow_images/grainsimg.jpg" class="card-img-top" alt="Grains">
+                    <div class="card-body">
+                        <h5 class="card-title">Grains</h5>
+                        <a href="grains.html" class="btn btn-success">View Products</a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col">
                 <div class="card">
-                    <img src="https://source.unsplash.com/400x300/?organic" class="card-img-top" alt="Oil Extracts">
-                    <div class="card-body text-center">
+                    <img src="/shopnow_images/oilextract.webp" class="card-img-top" alt="Oil Extracts">
+                    <div class="card-body">
                         <h5 class="card-title">Oil Extracts</h5>
-                        <a href="https://example.com/oil-extracts" class="btn btn-success">View Products</a> <!-- Replace with actual link -->
+                        <a href="oilextracts.html" class="btn btn-success">View Products</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 AgroConnect. All Rights Reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.body.style.opacity = "1";
+    </script>
 </body>
 </html>
